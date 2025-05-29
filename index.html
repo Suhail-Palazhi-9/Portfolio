@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freelance portfolio of Suhail Palazhi – expert in Excel, Python, web scraping, and automation.">
+  <meta name="keywords" content="Suhail Palazhi, Excel automation, Python freelancer, web scraping, data expert">
+  <title>Suhail Palazhi | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: sticky;
+      color: #00f7ff;
+      width: 100%;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px; /* reduce top/bottom padding */
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);   /* Frosted glass effect */
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent */
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
+      text-shadow: 0 0 4px #00f7ff88;
+    }
+
+    nav a.active {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    nav div {
+      font-weight: 700;
+      font-size: 20px;
+      color: #00ffff;
+    }
+
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d0ff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero {
+      background: linear-gradient(-45deg, #0f0f0f, #181818, #222, #111);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+      margin-top: 40px;
+    }
+
+    .glass-card p {
+      font-size: 17px;
+      line-height: 1.8;
+      text-align: center;
+      color: #ddd;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .skills-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skills-icons div {
+      text-align: center;
+    }
+
+    .skills-icons img {
+      width: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .skills-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .skills-icons span {
+      display: block;
+      margin-top: 5px;
+      color: #eee;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #888;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav div {
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+      
+    .hire-me {
+      background: #00ffff;
+      color: #121212;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 30px;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+      animation: pulse 2s infinite;
+    }
+
+    .hire-me:hover {
+      background: #00e0e0;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
+</head>
+<body>
+  <header style="background-color: #222; padding: 10px;">
+    <div style="font-size: 24px; font-weight: bold;">Suhail Palazhi</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="hire-me" href="https://www.freelancer.com/u/SuhailPalazhi0" target="_blank">Hire Me</a>
+    </nav>
+  </header>
+
+  <div class="hero" data-aos="fade-zoom-in" data-aos-delay="100">
+    <div>
+      <h1>Hi, I'm Suhail 👋</h1>
+      <p>I turn raw data into beautiful solutions. Freelance wizardry with Excel, Python, and words — all packed into one sharp portfolio.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    AOS.init();
+  </script>
+
+  <section class="section" id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="glass-card">
+      <p>
+        I’m a BCA student and freelancer who automates the boring stuff in Excel, scrapes data like a pro, and writes copy that keeps readers scrolling. I build practical tools — like a calorie calculator for gym bros — and I’ve crafted trivia for games like Elden Ring and Bloodborne. Basically, if it's data, I can turn it into magic.
+        <br><br>
+        My work style? Clean, precise, and just clever enough to make people think: “This guy gets it.”
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="skills" data-aos="fade-up" data-aos-delay="200">
+    <h2>Skills & Tools</h2>
+    <div class="glass-card">
+      <div class="skills-icons">
+        
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python"/><span>Python</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><span>Git</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"/><span>JavaScript</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"/><span>VS Code</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows"/><span>Windows</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><span>HTML</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/><span>CSS</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/><span>MySQL</span></div>
+        <div><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel VBA"/><span>Excel VBA</span></div>
+        <div><img src="https://img.icons8.com/color/48/microsoft-office-2019.png" alt="Microsoft 365"/><span>Microsoft 365</span></div>
+        <div><img src="https://img.icons8.com/color/48/google-sheets.png" alt="Google Sheets"/><span>Google Sheets</span></div>
+        <div><img src="https://img.icons8.com/fluency/48/data-in-both-directions.png" alt="Data Entry" /><span>Data Entry</span></div>
+        <div><img src="https://img.icons8.com/fluency/48/customer-support.png" alt="Customer Support"/><span>Customer Support</span></div>
+        <div><img src="https://img.icons8.com/color/48/content.png" alt="Content Writing"/><span>Content Writing</span></div>
+        <div><img src="https://img.icons8.com/fluency/48/broom.png" alt="Data Cleaning"/><span>Data Cleaning</span></div>
+        <div><img src="https://img.icons8.com/fluency/48/code.png" alt="Web Scraping"/><span>Web Scraping</span></div>
+        <div><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel Automation" /><span>Excel Automation</span></div>
+      </div>  
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hireMeButton = document.querySelector('.hire-me');
+      hireMeButton.addEventListener('click', () => {
+        alert('Thanks for considering hiring me! Let’s make something awesome together.');
+      });
+    });
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- AOS CSS -->
+  <script src="htttps://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+    })
+  </script>
+
+  <section id="contact" class="section" data-aos="fade-up" data-aos-delay="300">
+    <h2>Contact Me</h2>
+    <div class="glass-card">
+      <p>Ready to work together? Drop me a message on <a href="https://www.freelancer.com/u/SuhailPalazhi0" target="_blank" style="color: #00ffff;">Freelancer.com</a> or email me directly at <span style="color: #00ffff;">yoursuhailbusiness@gmail.com</span>.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Suhail Palazhi. Built with HTML, CSS & caffeine.
+  </footer>
+
+  <footer>
+    "Web scraping isn’t stealing — it’s just aggressive copy-paste with Python." – Suhail Palazhi
+  </footer>  
+
+</body>
+</html>
